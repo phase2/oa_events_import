@@ -90,4 +90,4 @@ features_exclude[field][node-oa_ical_importer-og_group_ref] = node-oa_ical_impor
 features_exclude[field_base][body] = body
 features_exclude[field_base][oa_section_ref] = oa_section_ref
 features_exclude[field_base][og_group_ref] = og_group_ref
-project path = profiles/openatrium/modules/features
+project path = sites/all/modules/contrib
