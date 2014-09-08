@@ -85,6 +85,11 @@ function oa_events_import_node_presave($node) {
  * Implements hook_oa_event_create().
  */
 function oa_events_import_oa_event_create_alter($node, $parent) {
-  $node->oa_section_ref = $parent->oa_section_ref;
-  $node->og_group_ref = $parent->og_group_ref;
+  // Assign the parent's section and group to the node if they are set
+  if (!empty($parent->oa_section_ref)) {
+    $node->oa_section_ref = $parent->oa_section_ref;
+  }
+  if (!empty($parent->og_group_ref)) {
+    $node->og_group_ref = $parent->og_group_ref;
+  }
 }
